@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-
+import reduxImg from "@/assets/download.png";
 function Banner() {
   return (
     <div className="min-h-[calc(100vh-55px)] max-w-7xl flex items-center flex-col md:flex-row gap-8 py-8 lg:py-0">
@@ -16,11 +16,7 @@ function Banner() {
         </div>
       </div>
       <div className="flex-1 ">
-        <img
-          src="https://www.cloudfuze.com/wp-content/uploads/2022/05/Banner-Why-You-Need-a-SaaS-Management-Platform-That-Does-It-All.jpg"
-          alt="logo"
-          className="w-full mt-4"
-        />
+        <img src={reduxImg} alt="logo" className="w-full mt-4" />
       </div>
     </div>
   );
