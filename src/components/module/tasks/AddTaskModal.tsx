@@ -16,7 +16,6 @@ import { ChevronDownIcon } from "lucide-react";
 
 import { useAppDispatch } from "@/Redux/hooks";
 import { addTask } from "@/Redux/features/task/taskSlice";
-import type { ITask } from "@/types";
 
 export function AddTaskModal() {
   const [title, setTitle] = useState("");
@@ -32,8 +31,7 @@ export function AddTaskModal() {
     e.preventDefault();
     if (!dueDate) return alert("Please select a due date");
 
-    const newTask: ITask = {
-      id: Date.now(),
+    const newTask = {
       title,
       description,
       status,
@@ -42,7 +40,7 @@ export function AddTaskModal() {
       createdAt: new Date().toISOString(),
     };
 
-    console.log(newTask);
+    console.log("From form=>", newTask);
     dispatch(addTask(newTask));
   };
 
